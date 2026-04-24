@@ -1,0 +1,35 @@
+#content{
+    max-width: 40%;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 50px 100px;
+
+    line-height: 1.5em;
+}
+
+h1, h5{
+    text-align: center;
+}
+h5{
+    margin-bottom: 0;
+    color: blue;
+}
+
+hr{
+    margin-top: 0;
+    margin-bottom: 50px;
+    color: grey;
+}
+
+.list{
+    list-style-type: decimal;
+}
+li{
+    margin-bottom: 10px;
+}
+
+.logo{
+    width: 30%;
+    display: block;
+    margin: 75px auto 0;
+}
