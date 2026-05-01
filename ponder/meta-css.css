@@ -46,3 +46,8 @@ img{
     list-style-type: none;
     padding: 0;
 }
+
+.background{
+    background-color: #000;
+    color: white;
+}
