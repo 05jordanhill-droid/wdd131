@@ -9,10 +9,12 @@
 
 h1, h5{
     text-align: center;
+    letter-spacing: 1px;
 }
 h5{
     margin-bottom: 0;
     color: blue;
+    letter-spacing: 2px;
 }
 
 hr{
@@ -32,4 +34,21 @@ li{
     width: 30%;
     display: block;
     margin: 75px auto 0;
+}
+
+.light *, .light{
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+.dark *:not(#lighting-mode, h5), .dark{
+    background-color: #333333;
+    color: white;
+    border-color: white;
+}
+.light h5{
+    color: blue;
+}
+.dark h5{
+    color: lightblue;
 }
