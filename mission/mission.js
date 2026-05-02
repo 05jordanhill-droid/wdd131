@@ -11,7 +11,7 @@ function changeTheme() {
     if (current == "dark") {
         logo.setAttribute("src", "images/byui-logo-white.png");
         pageContent.className = "dark";
-    } else if (current == "light") { // I prefer to avoid the usage of "else" because if I ever want to add more options then I have to change the "else" to an "else if" anyway
+    } else if (current == "light") { // I used "else if" over "else" because "Choose Mode", when using "even", will activate light mode even though light mode isn't selected.
         logo.setAttribute("src", "images/byui-logo-blue.webp");
         pageContent.className = "light";
     }
