@@ -28,11 +28,7 @@ function openModal(e) {
     modalImage.src = full;
     modalImage.alt = alt;
 
-    console.log("before")
-
     modal.showModal();
-    console.log("after")
-
 }
 
 closeButton.addEventListener('click', () => {
