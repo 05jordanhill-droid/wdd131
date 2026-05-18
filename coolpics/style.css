@@ -76,7 +76,7 @@ figure img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(40.25vw, -32vh);
+    transform: translate(40.25vw, -41vh);
 
     display: grid;
     place-items: center;
@@ -103,7 +103,7 @@ nav a{
         width: 70vw;
     }
     .close-viewer{
-        transform: translate(35.2vw, -36vh);
+        transform: translate(35.2vw, -41vh);
     }
 }
 @media screen and (min-width: 1000px) {
@@ -126,6 +126,6 @@ nav a{
         width: 50vw;
     }
     .close-viewer{
-        transform: translate(25.1vw, -36vh);
+        transform: translate(25.1vw, -41vh);
     }
 }
