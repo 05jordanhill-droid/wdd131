@@ -40,6 +40,11 @@ a{
 .book-details{
     grid-column: 2/3;
     text-align: right;
+
+    list-style: none;
+}
+.book-details li{
+    margin-bottom: 10px;
 }
 .book-description p, .book-title{
     text-align: left;
@@ -47,6 +52,10 @@ a{
 .book-title{
     color: crimson;
 }
+.book-description img{
+    max-width: 45%;
+}
+
 footer{
     border-top: 2px solid gold;
 }
