@@ -35,6 +35,7 @@ a{
     grid-template-columns: 3fr 1fr;
 
     border-top: 2px solid gold;
+    margin-bottom: 50px;
 }
 .book-details{
     grid-column: 2/3;
@@ -54,8 +55,6 @@ footer{
     #main-content{
         border-top: none;
         grid-template-columns: 1fr 2fr;
-
-        margin-bottom: 50px;
     }
     .book-details{
         grid-column: 1/2;
