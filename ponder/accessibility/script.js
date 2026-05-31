@@ -41,7 +41,7 @@ const movies = [
       }
     ];
 
-    const movieList = document.querySelector("#movie-list");
+const movieList = document.querySelector("#movie-list");
     movies.forEach(movie => {
         // Code for going through each movie and creating content for that movie
         const article = document.createElement("article");
