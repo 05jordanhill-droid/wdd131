@@ -1,4 +1,4 @@
-
+// Article List - EDITABLE
 const articles = [
 	{
 		id: 1,
@@ -39,4 +39,29 @@ const articles = [
 		stars: "⭐⭐⭐⭐⭐"
 	}
 ];
-                
+     
+
+// Displaying Articles - DON'T EDIT 
+const articleList = document.querySelector("#main-content");
+
+articles.forEach(item => {
+    const article = document.createElement("article");
+    article.className = "book-article"
+
+    let html = `
+        <ul class="book-details">
+            <li><em>${item.date}</em></li>
+            <li>${item.ages}</li>
+            <li>${item.genre}</li>
+            <li><span>${item.stars}</span></li>
+        </ul>
+        <section class="book-description">
+            <h2 class="book-title">${item.title}</h2>
+            <img src=${item.imgSrc} alt=${item.imgAlt}>
+            <p>${item.description}</p>
+        </section>
+        `
+
+    article.innerHTML = html;
+    articleList.appendChild(article);
+});
