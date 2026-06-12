@@ -58,7 +58,7 @@ function populateHTML(card){
     update();
 }
 
-const card = makeCard("Snortleblat", "Swamp Beast Diplomat", 5, 100, "snortleblat.webp", "Bipedal alligator wiedling a club in a swamp.");
+const card = makeCard("Snortleblat", "Swamp Beast Diplomat", 5, 100, "snortleblat.webp", "Bipedal alligator wielding a club in a swamp.");
 card.display();
 
 document.querySelector(".attacked").addEventListener("click", function(){
