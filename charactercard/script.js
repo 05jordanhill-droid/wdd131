@@ -27,7 +27,6 @@ function makeCard(name_, class_, level_, health_, image_){
                 populateHTML(this);
             }
         }
-    card.display();
 
     return card;
 }
@@ -53,9 +52,6 @@ function populateHTML(card){
         <img class="image" src="${card.image}" alt="${card.name}">
         <h3 class="name">${card.name}</h2>
         <section class="stats">
-            <p class="class">Class: ${card.class}</p>
-            <p class="level">Level: ${card.level}</p>
-            <p class="health">Health: ${card.health}</p>
         </section>
         <section class="buttons">
             <button class="attacked">Attacked</button>
@@ -63,9 +59,12 @@ function populateHTML(card){
         </section>
     `;
     document.querySelector(".card").innerHTML = html;
+
+    update();
 }
 
 const card = makeCard("Snortleblat", "Swamp Beast Diplomat", 5, 100, "snortleblat.webp");
+card.display();
 
 document.querySelector(".attacked").addEventListener("click", function(){
     card.attacked();
