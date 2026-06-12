@@ -3,14 +3,14 @@
 // The .attacked() method will subtract 20 from the health property value. When the health property reaches zero, let the user know the character has died.
 // The .levelUp() method will add 1 to the level property value.
 
-function makeCard(name_, class_, level_, health_){
+function makeCard(name_, class_, level_, health_, image_){
     const card =
         {
             name: name_,
             class: class_,
             level: level_,
             health: health_,
-            image: `images/${name_}.webp`,
+            image: `images/${image}`,
             attacked: function(){
                 if(this.health > 0){
                     this.health -= 20;
@@ -65,7 +65,7 @@ function populateHTML(card){
     document.querySelector(".card").innerHTML = html;
 }
 
-const card = makeCard("Snortleblat", "Swamp Beast Diplomat", 5, 100);
+const card = makeCard("Snortleblat", "Swamp Beast Diplomat", 5, 100, "snortleblat.webp");
 
 document.querySelector(".attacked").addEventListener("click", function(){
     card.attacked();
