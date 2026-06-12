@@ -10,7 +10,7 @@ function makeCard(name_, class_, level_, health_, image_){
             class: class_,
             level: level_,
             health: health_,
-            image: `images/${image}`,
+            image: `images/${image_}`,
             attacked: function(){
                 if(this.health > 0){
                     this.health -= 20;
