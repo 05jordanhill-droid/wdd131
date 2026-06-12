@@ -1,8 +1,3 @@
-// Create a character card with: properties: name, class, level, health, and image and methods: attacked and levelUp
-// Use an object with properties and methods.
-// The .attacked() method will subtract 20 from the health property value. When the health property reaches zero, let the user know the character has died.
-// The .levelUp() method will add 1 to the level property value.
-
 function makeCard(name_, class_, level_, health_, image_, alt_){
     const card =
         {
