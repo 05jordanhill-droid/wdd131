@@ -51,7 +51,7 @@ function update(){
 function populateHTML(card){
     const html = `
         <img class="image" src="${card.image}" alt="${card.alt}">
-        <h3 class="name">${card.name}</h2>
+        <h1 class="name">${card.name}</h1>
         <section class="stats"></section>
         <section class="buttons">
             <button class="attacked">Attacked</button>
