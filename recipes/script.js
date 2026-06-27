@@ -323,9 +323,9 @@ function difficultyTemplate(rating) {
 
     for (let i = 1; i <= 5; i++) {
         if (i <= rating) {
-            html += `<span aria-hidden="true" class="icon-boot"> ⭐ </span>`
+            html += `<span aria-hidden="true" class="icon-boot">⭐</span>`
         } else {
-            html += `<span aria-hidden="true" class="icon-empty"> ☆ </span>`
+            html += `<span aria-hidden="true" class="icon-empty">☆</span>`
         }			
     }
     html += `</span>`
