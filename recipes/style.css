@@ -10,7 +10,7 @@
 }
 
 #wrapper{
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
 
     display: flex;
@@ -41,11 +41,20 @@ header{
     display: flex;
     border: 2px solid black;
     border-radius: 10px;
-    padding: 5px
+    padding: 4px
 }
-#search-bar img{
+#search-bar button{
     flex: 0 1 30px;
     min-width: 0;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+#search-bar button img{
+    width: 100%;
+    
+    display: flex;
+    align-self: center;
 }
 #search-bar hr{
     align-self: stretch;
@@ -77,12 +86,9 @@ article{
     align-self: center;
     width: 100%;
 }
-.food-type{
-    border: 1px solid black;
-    border-radius: 3px;
-    background-color: #cacaca;
-
-    padding: 2px;
+#food-type button{
+    border-radius: 0;
+    border: .5px solid black;
 }
 .food-name{
     margin-bottom: 5px;
