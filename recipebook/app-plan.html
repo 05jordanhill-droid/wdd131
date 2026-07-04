@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<title>Site Plan</title>
+		<link type="text/css" rel="stylesheet" href="site-plan.css" />
+	</head>
+
+	<body>
+		<header>
+			<h1>Recipebook Project Plan</h1>
+			<h2>Jordan Hill</h2>
+			<h2>WDD 131.A2</h2>
+			<!-- In the header above, add the name or your site, your name and class number. For example if you are in section 3 you would put WDD 131.03 -->
+		</header>
+		<main>
+			
+			<hr />
+			<h2>Overview</h2>
+			<h3>Purpose</h3>
+			<p>The purpose of this site will be to host any kind of recipe on an easily accessible website. It will have a page for adding a recipe, an easy to peruse display of the recipes, and a search function.</p>
+			<!-- change this -->
+
+			<h3>Audience</h3>
+			<p>The audience for this website will be targeted specifically for my wife who loves to cook.</p>
+			<!-- change this -->
+
+			<h3>Dynamic elements</h3>
+			<p>
+				The content for the initially displayed recipe Names and Images will be dynamically loaded and then the selected recipe will dynamically load its information from a product or recipe dictionary. 
+				A current idea for the dictionary is as follows:
+<pre>[
+	{
+		name: `Recipe Name 1`,
+		imgSrc: `whatever/stored/image/link/address`,
+		sourceLink: `whatever/source/link/address`,
+		time: {
+			time1: {
+				title: `Generic time title`,
+				hour: 1,
+				minute: 30
+			},
+			time2: {
+				title: `Specific time title`,
+				hour: `-`,
+				minute: 30
+			}
+		},
+		ingredients: [
+			`$heading$heading 1`,
+			`$sub$ingredient 1`,
+			`$sub$ingredient 2`,
+			`$sub$ingredient 3`,
+			`$sub$ingredient 4`,
+			`$heading$heading 2`,
+			`$sub$ingredient 1`,
+			`$sub$ingredient 2`,
+			`$sub$ingredient 3`
+		],
+		instructions: [
+			`$heading$heading 1`,
+			`$sub$step 1`,
+			`$sub$step 2`,
+			`$sub$step 3`,
+			`$sub$step 4`,
+			`$heading$heading 2`,
+			`$sub$step 1`,
+			`$sub$step 2`,
+			`$sub$step 3`
+		],
+		notes: `-`,
+	}
+];</pre>
+			</p>
+			<!-- change this -->
+
+			<hr />
+			<h2>Branding</h2>
+			<h3>Website Logo</h3>
+			<!-- Replace this with some sort of logo for your site.  A logo can be as simple as the name of your site in a nice font :) -->
+			<img src="images/logo.png" alt="Logo image" />
+			<hr />
+			<h2>Style Guide</h2>
+
+			<h3>Color Palette</h3>
+			<!--  The colors you choose for a website are one of the most important decisions you will make. Follow the instructions on the activity in iLearn then return and replace the color codes below with the hex color codes (the 6 digit numbers that show at the bottom of each color) for the colors you have chosen below.  You should have at least 2 colors but do not have to fill in all 4 if you do not need them.  -->
+
+			<!-- Copy and paste the URL to your finished palette below Make sure to paste it into both spots -->
+			Palette URL:
+			<a
+				href="https://coolors.co/423e37-e3b23c-edebd7-a39594-6e675f"
+				target="_blank"
+				>https://coolors.co/423e37-e3b23c-edebd7-a39594-6e675f</a
+			>
+
+			<table class="colors">
+				<tbody>
+					<tr>
+						<th>Primary</th>
+						<th>Secondary</th>
+						<th>Accent 1</th>
+						<th>Accent 2</th>
+					</tr>
+					<!-- Replace the numbers in the boxes below with your hex color codes. Then switch to the site-plan.css file and change your colors there as well. -->
+					<tr>
+						<td class="primary">#423E37</td>
+						<td class="secondary">#E3B23C</td>
+						<td class="accent1">#EDEBD7</td>
+						<td class="accent2">#6E675F</td>
+					</tr>
+				</tbody>
+			</table>
+
+			
+
+			<h3>Pseudocode for your project</h3>
+
+			<p>
+				Home Page: <br>
+			&nbsp;&nbsp;-Images/Name boxes displayed by default by whatever order in the product dict aka by the date/time the recipe was uploaded/stored. <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;+boxes loaded dynamically from product dict by whatever filter and/or sorting method applied. <br>
+			&nbsp;&nbsp;-Logo image on click > redirect to home page. <br>
+			&nbsp;&nbsp;-Search bar > filters recipes on display. <br>
+			&nbsp;&nbsp;-Randomize Order on click > Randomize the order in which recipes are displayed. <br>
+			&nbsp;&nbsp;-Alphabetical Order on click > Display the order of the recipes alphabetically. <br>
+			&nbsp;&nbsp;-Reverse Order on click > Reverse the current order of the displayed recipes. <br>
+			&nbsp;&nbsp;-Add Recipe on click > Redirect to Add Recipe page. <br>
+			&nbsp;&nbsp;-Product Image/Name box on click > display associated product's recipe along with all of it's given information attached to it. <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;+X button on click > close the opened display for that recipe. <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;+Recipe Name on click > Open link to Source Link. <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;+Information is loaded dynamically from product dict. <br>
+ <br>
+				Add Recipe Page: <br>
+			&nbsp;&nbsp;-Logo image on click > redirect to home page. <br>
+			&nbsp;&nbsp;-Back button on click > redirect to home page. <br>
+			&nbsp;&nbsp;-Name button on click > open/close option to input product's name. <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;+Click check to input name to product dict. <br>
+			&nbsp;&nbsp;-Image button on click > open/close button to upload image. <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;+Click check to input image to product dict. <br>
+			&nbsp;&nbsp;-Source Link button on click > open/close option to input the product's source link if the recipe is from a website. <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;+Click check to input link to product dict > iframe updates to display the source website as a reference for filling out the rest of the recipe form. <br>
+			&nbsp;&nbsp;-Time button on click > open/close option to input time in three input areas: Hour, Minute, Title (Like "total time" or "prep time"). <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;+Click plus to add another time (so you can display the total time and prep time, etc...). <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;+Click check to input time(s) to product dict. <br>
+			&nbsp;&nbsp;-Servings button on click > open/close option to input servings amount with recipe. <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;+Click check to input serving amount to product dict. <br>
+			&nbsp;&nbsp;-Calories button on click > open/close option to input calory amount with product. <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;+Click check to input calory amount  to product dict. <br>
+			&nbsp;&nbsp;-Ingredients button on click > open/close option to input either a heading or an ingredient. <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;+Click headings check to input provided text as a heading in the Ingredients in the product dict. <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;+Click ingredients check to input provided text as an ingredient in the Ingredients in the product dict.  <br>
+			&nbsp;&nbsp;-Instructions button on click > open/close option to input either a heading or an ingredient. <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;+Click headings check to input provided text as a heading in the Instructions in the product dict. <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;+Click instructions check to input provided text as a step in the Instructions in the product dict. <br>
+			&nbsp;&nbsp;-Notes button on click > open/close option to input either a heading or a note. <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;+Click headings check to input provided text as a heading in the Notes in the product dict. <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;+Click instructions check to input provided text as a note in the Notes in the product dict. <br>
+			&nbsp;&nbsp;-Confirm Recipe button on click > Officially upload addition to stored recipes. <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;+Entries with nothing given provide "-" by default in the product dict. <br>
+			</p>
+
+			<h3>Wireframes</h3>
+			<p>
+				Create wireframes for your project page(s). One for each page and list them
+				here. 
+			</p>
+
+			<h3>Landing page</h3>
+			<p>
+				All additional information that is unclear in the wireframe is made clear in the pseudo code section.
+			</p>
+			<a href="images/wireframe-home-page.webp" target="_blank">Home Page Wireframe Link</a>
+
+			<h3>Add Recipe Page</h3>
+			<p>
+				All additional information that is unclear in the wireframe is made clear in the pseudo code section.
+			</p>
+			<a href="images/wireframe-add-recipe-page.webp" target="_blank">Add Recipe Page Wireframe Link</a>
+		</main>
+	</body>
+</html>
