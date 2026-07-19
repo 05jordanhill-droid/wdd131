@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Summer's Recipes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <meta name="description" content="Recipe Book">
+    <meta name="author" content="Jordan Hill">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="add-recipe.css">
+    <script defer src="add-recipe.js"></script>
+    
+    <!-- Open Graph (Facebook, LinkedIn, etc.) 1200x630 pixels-->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Recipe Book">
+    <meta property="og:description" content="Recipe Book">
+    <meta property="og:url" content="https://05jordanhill-droid.github.io/recipes/index.html">
+    <meta property="og:image" content="https://05jordanhill-droid.github.io/recipes/images/socialMedia.png">
+
+    <!-- One favicon (ICO works everywhere) 16x16 32x32 64x64 pixels-->
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Twitter Card 1200x630 pixels-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Recipe Book">
+    <meta name="twitter:description" content="Recipe Book">
+    <meta name="twitter:image" content="https://05jordanhill-droid.github.io/recipes/images/socialMedia.png">
+
+    <!-- One Apple Touch Icon (iOS home screen) 180x180 pixels-->
+    <link rel="apple-touch-icon" href="images/iphoneCC.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <section id="title">
+                <h1 class="headline">Summer's Recipes</h1>
+                <a href="index.html"><img src="images/logo.png" alt=""></a>
+            </section>
+            <a href="index.html"><img id="back-button" src="images/back-arrow.png" alt="back button"></a>
+        </header>
+        <hr>
+        <main>
+            <section id="recipe-container"></section>
+
+            <form id="add-recipe">
+                <section id="recipe-pieces">
+                    <div id="name-field">
+                        <button class="push"><p>+</p></button>
+                        <button id="nameButton"><h2>Name</h2></button>
+                        <input class="hidden" name="name" type="text" placeholder="Enter name here">
+                    </div>
+                    <div id="image-field">
+                        <button class="push"><p>+</p></button>
+                        <button id="imageButton"><h2>Image</h2></button>
+                        <input class="hidden" name="image" type="text" placeholder="Enter image address here">
+                    </div>
+                    <div id="source-field">
+                        <button class="push"><p>+</p></button>
+                        <button id="sourceButton"><h2>Source Link</h2></button>
+                        <input class="hidden" name="source" type="text" placeholder="Enter source url here">
+                    </div>
+                    <div id="time-field">
+                        <button class="push"><p>+</p></button>
+                        <button id="timeButton"><h2>Time</h2></button>
+                        <input id="time-label" class="hidden" name="time-label" type="text" placeholder="Enter label here">
+                        <input id="time-minute" class="hidden" name="time-minute" type="text" placeholder="Enter minute(s) here">
+                        <input id="time-hour" class="hidden" name="time-hour" type="text" placeholder="Enter hour(s) here">
+                    </div>
+                    <div id="servings-field">
+                        <button class="push"><p>+</p></button>
+                        <button id="servingsButton"><h2>Servings</h2></button>
+                        <input class="hidden" name="servings-label" type="text" placeholder="Enter servings here">
+                    </div>
+                    <div id="calories-field">
+                        <button class="push"><p>+</p></button>
+                        <button id="caloriesButton"><h2>Calories</h2></button>
+                        <input class="hidden" name="calories" type="text" placeholder="Enter calories here">
+                    </div>
+                    <div id="ingredients-field">
+                        <button class="push"><p>+</p></button>
+                        <button id="ingredientsButton"><h2>Ingredients</h2></button>
+                        <div id="heading-ingredients-field" class="hidden full sub-holding">
+                            <button id="headingIngredientsButton" class="hidden full"><h3>Heading</h3></button>
+                            <input class="hidden full" name="heading" type="text" placeholder="Enter heading here">
+                        </div>
+                        <div id="ingredient-field" class="hidden full sub-holding">
+                            <button id="ingredientButton" class="hidden full"><h3>Ingredient</h3></button>
+                            <input class="hidden full" name="ingredient" type="text" placeholder="Enter ingredient here">
+                        </div>
+                    </div>
+                    <div id="instructions-field">
+                        <button class="push"><p>+</p></button>
+                        <button id="instructionsButton"><h2>Instructions</h2></button>
+                        <div id="heading-instructions-field" class="hidden full sub-holding">
+                            <button id="headingIngredientsButton" class="hidden full"><h3>Heading</h3></button>
+                            <input class="hidden full" name="heading" type="text" placeholder="Enter heading here">
+                        </div>
+                        <div id="instruction-field" class="hidden full sub-holding">
+                            <button id="ingredientButton" class="hidden full"><h3>Instruction</h3></button>
+                            <input class="hidden full" name="instruction" type="text" placeholder="Enter instruction here">
+                        </div>
+                    </div>
+                    <div id="notes-field">
+                        <button class="push"><p>+</p></button>
+                        <button id="notesButton"><h2>Notes</h2></button>
+                        <input class="hidden" name="notes" type="text" placeholder="Enter notes here">
+                    </div>
+                </section>
+
+                <iframe src="" frameborder="0"></iframe>
+                
+                <button type="submit" aria-label="submit button" id="submit-button">
+                    <h2>Confirm Recipe</h2>
+                </button>
+            </form>
+        </main>
+
+        <footer>
+            <div class="social">
+                <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+                <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+                <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+                <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+            </div>
+        </footer>
+    </div>
+</body>

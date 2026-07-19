@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Summer's Recipes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <meta name="description" content="Recipe Book">
+    <meta name="author" content="Jordan Hill">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    
+    <!-- Open Graph (Facebook, LinkedIn, etc.) 1200x630 pixels-->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Recipe Book">
+    <meta property="og:description" content="Recipe Book">
+    <meta property="og:url" content="https://05jordanhill-droid.github.io/recipes/index.html">
+    <meta property="og:image" content="https://05jordanhill-droid.github.io/recipes/images/socialMedia.png">
+
+    <!-- One favicon (ICO works everywhere) 16x16 32x32 64x64 pixels-->
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Twitter Card 1200x630 pixels-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Recipe Book">
+    <meta name="twitter:description" content="Recipe Book">
+    <meta name="twitter:image" content="https://05jordanhill-droid.github.io/recipes/images/socialMedia.png">
+
+    <!-- One Apple Touch Icon (iOS home screen) 180x180 pixels-->
+    <link rel="apple-touch-icon" href="images/iphoneCC.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <section id="title">
+                <h1 class="headline">Summer's Recipes</h1>
+                <a href="index.html"><img src="images/logo.png" alt=""></a>
+            </section>
+            <form id="search-bar">
+                <input type="text" id="search" name="search-bar" placeholder="Find a Recipe...">
+                <hr>
+                <button type="submit" aria-label="search button" id="search-button">
+                    <img src="images/search.svg" alt="">
+                </button>
+            </form>
+            <section id="options">
+                <button aria-label="random button" id="random">Random Order</button>
+                <button aria-label="alphabetical button" id="alphabetical">Alphabetical Order</button>
+                <button aria-label="reverse button" id="reverse">Reverse Order</button>
+                <button aria-label="time button" id="time">Time Order</button>
+                <button aria-label="add recipe page" id="add"><a href="add-recipe.html">Add Recipe</a></button>
+            </section>
+        </header>
+        <hr>
+        <main>
+            <section id="recipe-container"></section>
+            <section id="display-container"></section>
+        </main>
+
+        <footer>
+            <div class="social">
+                <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+                <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+                <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+                <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+            </div>
+        </footer>
+    </div>
+</body>

@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+}
+
+.headline {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 10px;
+}
+
+#options button{
+    width: 100%;
+    aspect-ratio: 5/1;
+}
+
+#display-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10%;
+}
+.display{
+    aspect-ratio: 1/1;
+    margin-top: 5%;
+    width: 200px;
+}
+.display img{
+    width: 100%;
+}
+
+#wrapper{
+    margin: 0 auto;
+
+    gap: 1em;
+
+    padding: 10px;
+    width: 90%;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+button:hover{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+}
+#title{
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 2em;
+}
+#title h1{
+    margin: auto auto;
+}
+#title img{
+    height: 100%;
+    max-width: 150px;
+    display: flex;
+    justify-self: flex-end;
+}
+
+#search-bar{
+    display: flex;
+    border: 2px solid black;
+    padding: 4px;
+    margin-top: 10px;
+}
+#search-bar button{
+    flex: 0 1 30px;
+    min-width: 0;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+#search-bar button img{
+    width: 100%;
+    
+    display: flex;
+    align-self: center;
+    background-size: cover;
+}
+#search-bar hr{
+    align-self: stretch;
+    height: auto;
+    width: 1px;
+    background: black;
+
+    margin-right: 5px;
+}
+#search-bar input{
+    border: none;
+    flex: 1 1 100px;
+}
+
+#recipe-container{
+    position: absolute;
+    background-color: white;
+
+    left: 12.5%;
+    width: 75%;
+}
+article{
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.social{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+}
+.social *{
+    flex: 0 0 30px;
+}
+
+footer a{
+    display: flex;
+    align-self: center;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.fa-x{
+    aspect-ratio: 1/1;
+    margin-left: 15px;
+
+    display: flex;
+}
+.fa-x:hover{
+    cursor: pointer;
+}
+
+@media screen and (min-width: 550px) {
+    #options{
+        display: flex;
+    }
+    #options button{
+        flex: 1;
+        aspect-ratio: 4/1;
+    }
+
+    .header{
+        display: flex;
+    }
+    .recipeName{
+        margin: 0 auto;
+    }
+    .main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 5%;
+    }
+    .sub{
+        margin-left: 5%;
+    }
+}
