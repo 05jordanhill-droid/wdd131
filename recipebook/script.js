@@ -350,7 +350,7 @@ let randomNum = Math.floor(Math.random()*recipes.length);
 
 function displayTemplate(recipe) {
     return `<button class="display selectable">
-            <h3 class="name">${recipe.name}</h3>
+            <p class="name">${recipe.name}</p>
             <img src="${recipe.imgSrc}" alt="${recipe.name}">
         </button>`
 }
@@ -359,7 +359,7 @@ function recipeTemplate(recipe) {
         <article class="recipe">
             <section class="header">
                 <i class="fa-solid fa-x"></i>
-                <h3 class="recipeName"><a href="${recipe.sourceLink}" target="_blank">${recipe.name}</a></h3>
+                <p class="recipeName"><a href="${recipe.sourceLink}" target="_blank">${recipe.name}</a></p>
             </section>
             <section class="main">
                 <img src="${recipe.imgSrc}" alt="${recipe.name}">
@@ -403,7 +403,7 @@ function ingredientsTemplate(ingredients) {
         {
             ingredient = ingredient.replace("$heading$", "");
             
-            html += `<h3>${ingredient}</h3>`;
+            html += `<p>${ingredient}</p>`;
         } 
         else if (ingredient.includes("$sub$"))
         {
@@ -419,7 +419,7 @@ function instructionsTemplate(instructions) {
         if(instruction.includes("$heading$"))
         {
             instruction = instruction.replace("$heading$", "");
-            html += `<h3>${instruction}</h3>`;
+            html += `<p>${instruction}</p>`;
         } 
         else if (instruction.includes("$sub$"))
         {

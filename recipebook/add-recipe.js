@@ -339,7 +339,7 @@ function ingredientsTemplate(ingredients) {
         {
             ingredient = ingredient.replace("$heading$", "");
             
-            html += `<h3>${ingredient}</h3>`;
+            html += `<h1>${ingredient}</h1>`;
         } 
         else if (ingredient.includes("$sub$"))
         {
@@ -355,7 +355,7 @@ function instructionsTemplate(instructions) {
         if(instruction.includes("$heading$"))
         {
             instruction = instruction.replace("$heading$", "");
-            html += `<h3>${instruction}</h3>`;
+            html += `<h1>${instruction}</h1>`;
         } 
         else if (instruction.includes("$sub$"))
         {
@@ -414,7 +414,7 @@ function recipeTemplate(recipe) {
         <article class="recipe">
             <section class="header">
                 <i class="fa-solid fa-x"></i>
-                <h3 class="recipeName"><a href="${recipe.sourceLink}" target="_blank">${recipe.name}</a></h3>
+                <h1 class="recipeName"><a href="${recipe.sourceLink}" target="_blank">${recipe.name}</a></h1>
             </section>
             <section class="main">
                 <img src="${recipe.imgSrc}" alt="${recipe.name}">
