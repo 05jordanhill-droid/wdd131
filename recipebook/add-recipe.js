@@ -259,7 +259,7 @@ function instructionsToggle(event){
     inputInstructions.forEach(instructions => instructions.classList.toggle("hidden"))
 }
 
-let headingInstructionsButton = document.querySelector("#headingIngredientsButton");
+let headingInstructionsButton = document.querySelector("#headingInstructionsButton");
 headingInstructionsButton.addEventListener("click", headingInstructionsToggle);
 
 function headingInstructionsToggle(event){
@@ -269,7 +269,7 @@ function headingInstructionsToggle(event){
     inputInstructions.classList.toggle("hidden");
 }
 
-let instructionButton = document.querySelector("#ingredientButton");
+let instructionButton = document.querySelector("#instructionButton");
 instructionButton.addEventListener("click", instructionToggle);
 
 function instructionToggle(event){
