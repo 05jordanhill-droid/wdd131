@@ -146,14 +146,14 @@ Vinegar: often I'll sub in rice vinegar for the apple cider vinegar for a milder
         servings: 6,
         calories: `-`,
 		ingredients: [
+			`$sub$2 cup all purpose flour`,
+			`$sub$2/3 cup butter unsalted, cold`,
+			`$sub$5-6 tbsp water cold`,
+            `$heading$Equipment`,
             `$sub$1 pie pan`,
 			`$sub$1 pastry cutter`,
 			`$sub$1 cutting board`,
-			`$sub$1 Bowl`,
-			`$heading$Equipment`,
-			`$sub$2 cup all purpose flour`,
-			`$sub$2/3 cup butter unsalted, cold`,
-			`$sub$5-6 tbsp water cold`
+			`$sub$1 Bowl`
 		],
 		instructions: [
 			`$sub$Prepare the pie crust by mixing flour and 2/3 cup butter. Use a pastry blender (or criss-cross two butter knives together) to press ingredients together to create a crumbly texture.`,
