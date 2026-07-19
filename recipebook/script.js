@@ -174,17 +174,6 @@ Remove the beans and bake for another 5 minutes or until lightly browned
 Nutrition:
 Serving: 1oz | Calories: 333kcal | Carbohydrates: 32g | Protein: 5g | Fat: 21g | Saturated Fat: 13g | Polyunsaturated Fat: 1g | Monounsaturated Fat: 5g | Trans Fat: 1g | Cholesterol: 54mg | Sodium: 164mg | Potassium: 51mg | Fiber: 1g | Sugar: 0.1g | Vitamin A: 630IU | Calcium: 13mg | Iron: 2mg`,
 	}
-    // {
-    //     name: ``,
-    //     imgSrc: ``,
-    //     link: ``,
-    //     time: ``,
-    //     servings: ``,
-    //     calories: ``,
-    //     ingredients: ``,
-    //     instructions: ``,
-    //     notes: ``,
-    // },
 ];
 
 let recipeContainer = document.querySelector("#recipe-container");
@@ -240,6 +229,11 @@ function randomOrder(event){
     recipeDisplays.forEach(recipe => {
         displayContainer.appendChild(recipe);
     })
+    
+    let selectables = document.querySelectorAll(".selectable");
+    selectables.forEach(selectable => {
+        selectable.addEventListener("click", openSelection);
+    });
 }
 
 function reverseOrder(event){
@@ -256,6 +250,11 @@ function reverseOrder(event){
     recipeDisplays.forEach(recipe => {
         displayContainer.appendChild(recipe);
     })
+
+    let selectables = document.querySelectorAll(".selectable");
+    selectables.forEach(selectable => {
+        selectable.addEventListener("click", openSelection);
+    });
 }
 
 function timeOrder(event){
@@ -268,24 +267,24 @@ function timeOrder(event){
     let sortedRecipes = filterRecipes.sort(compareRecipes);
 
     function compareRecipes(a, b) {
-        console.log(a.name + getTime(a.times["time1"]));
-        console.log(b.name + getTime(b.times["time1"]));
-        console.log(getTime(a.times["time1"]) < getTime(b.times["time1"]));
         if (getTime(a.times["time1"]) < getTime(b.times["time1"])) {
-            return 1;
-        } else if (getTime(a.times["time1"]) > getTime(b.times["time1"])) {
             return -1;
+        } else if (getTime(a.times["time1"]) > getTime(b.times["time1"])) {
+            return 1;
         }
         return 0;
     }
-
-    console.log(sortedRecipes);
 
     displayContainer.innerHTML = "";
 
     sortedRecipes.forEach(function(recipe){
         renderDisplay(recipe);
     })
+    
+    let selectables = document.querySelectorAll(".selectable");
+    selectables.forEach(selectable => {
+        selectable.addEventListener("click", openSelection);
+    });
 }
 
 function alphabeticalOrder(event){
@@ -311,6 +310,11 @@ function alphabeticalOrder(event){
     sortedRecipes.forEach(function(recipe){
         renderDisplay(recipe);
     })
+    
+    let selectables = document.querySelectorAll(".selectable");
+    selectables.forEach(selectable => {
+        selectable.addEventListener("click", openSelection);
+    });
 }
 
 function search(event){
@@ -324,17 +328,6 @@ function search(event){
         );
     })
 
-    // let sortedRecipes = filterRecipes.sort(comparerecipes);
-
-    // function comparerecipes(a,b) {
-    //     if (a.name < b.name) {
-    //         return -1;
-    //     } else if (a.name > b.name) {
-    //         return 1;
-    //     }
-    //     return 0;
-    // }
-
     let sortedRecipes = filterRecipes;
 
     displayContainer.innerHTML = "";
@@ -342,6 +335,11 @@ function search(event){
     sortedRecipes.forEach(function(recipe){
         renderDisplay(recipe);
     })
+    
+    let selectables = document.querySelectorAll(".selectable");
+    selectables.forEach(selectable => {
+        selectable.addEventListener("click", openSelection);
+    });
 }
 
 let randomNum = Math.floor(Math.random()*recipes.length);
@@ -357,10 +355,10 @@ function recipeTemplate(recipe) {
         <article class="recipe">
             <section class="header">
                 <i class="fa-solid fa-x"></i>
-                <h3 class="recipeName"><a href=${recipe.link} target="_blank">${recipe.name}</a></h3>
+                <h3 class="recipeName"><a href="${recipe.sourceLink}" target="_blank">${recipe.name}</a></h3>
             </section>
             <section class="main">
-                <img src=${recipe.link} alt=${recipe.name}>
+                <img src="${recipe.imgSrc}" alt="${recipe.name}">
                 <section class="timesContainer">
                     <h1>Time</h1>
                 </section>

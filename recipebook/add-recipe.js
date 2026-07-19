@@ -205,7 +205,7 @@ function ingredientsToggle(event){
     inputIngredients.forEach(ingredient => ingredient.classList.toggle("hidden"))
 }
 
-let headingIngredientsButton = document.querySelector("#heading-ingredients-field");
+let headingIngredientsButton = document.querySelector("#headingIngredientsButton");
 headingIngredientsButton.addEventListener("click", headingIngredientsToggle);
 
 function headingIngredientsToggle(event){
@@ -215,7 +215,7 @@ function headingIngredientsToggle(event){
     inputIngredients.classList.toggle("hidden");
 }
 
-let ingredientButton = document.querySelector("#ingredient-field");
+let ingredientButton = document.querySelector("#ingredientButton");
 ingredientButton.addEventListener("click", ingredientToggle);
 
 function ingredientToggle(event){
@@ -231,18 +231,16 @@ ingredientsPush.addEventListener("click", pushIngredients);
 function pushIngredients(event){
 	event.preventDefault();
 
-    let headingContainer = document.querySelector("#headingIngredientsButton").value;
-    let ingredientContainer = document.querySelector("#ingredientButton").value;
+    let headingContainer = document.querySelector("#heading-ingredients-field input").value;
+    let ingredientContainer = document.querySelector("#ingredient-field input").value;
 
-    if(headingContainer == ""){
-        headingContainer = "-";
+    if(headingContainer != ""){
+        displayedRecipe.ingredients.push(headingContainer.replace(headingContainer, `$heading$${headingContainer}`));
     }
-    if(ingredientContainer == ""){
-        ingredientContainer = "-";
+    if(ingredientContainer != ""){
+        displayedRecipe.ingredients.push(ingredientContainer.replace(ingredientContainer, `$sub$${ingredientContainer}`));
     }
 
-    displayedRecipe.ingredients = headingContainer.replace(headingContainer, `$heading$${headingContainer}`);
-    displayedRecipe.ingredients = instructionContainer.replace(ingredientContainer, `$sub$${ingredientContainer}`);
 }
 
 
@@ -261,7 +259,7 @@ function instructionsToggle(event){
     inputInstructions.forEach(instructions => instructions.classList.toggle("hidden"))
 }
 
-let headingInstructionsButton = document.querySelector("#heading-instructions-field");
+let headingInstructionsButton = document.querySelector("#headingIngredientsButton");
 headingInstructionsButton.addEventListener("click", headingInstructionsToggle);
 
 function headingInstructionsToggle(event){
@@ -271,7 +269,7 @@ function headingInstructionsToggle(event){
     inputInstructions.classList.toggle("hidden");
 }
 
-let instructionButton = document.querySelector("#instruction-field");
+let instructionButton = document.querySelector("#ingredientButton");
 instructionButton.addEventListener("click", instructionToggle);
 
 function instructionToggle(event){
@@ -287,8 +285,8 @@ instructionsPush.addEventListener("click", pushInstructions);
 function pushInstructions(event){
 	event.preventDefault();
 
-    let headingContainer = document.querySelector("#headingInstructionsButton").value;
-    let instructionsContainer = document.querySelector("#instructionsButton").value;
+    let headingContainer = document.querySelector("#heading-instructions-field input").value;
+    let instructionsContainer = document.querySelector("#instruction-field input").value;
 
     if(headingContainer == ""){
         headingContainer = "-";
@@ -297,8 +295,8 @@ function pushInstructions(event){
         instructionsContainer = "-";
     }
 
-    displayedRecipe.instructions = headingContainer.replace(headingContainer, `$heading$${headingContainer}`);
-    displayedRecipe.instructions = instructionContainer.replace(ingredientContainer, `$sub$${ingredientContainer}`);
+    displayedRecipe.instructions.push(headingContainer.replace(headingContainer, `$heading$${headingContainer}`));
+    displayedRecipe.instructions.push(instructionContainer.replace(ingredientContainer, `$sub$${ingredientContainer}`));
 }
 
 
@@ -334,6 +332,8 @@ function timesTemplate(times) {
 }
 function ingredientsTemplate(ingredients) {
     let html = "";
+    console.log("test");
+    console.log(ingredients);
     ingredients.forEach(ingredient => {
         if(ingredient.includes("$heading$"))
         {
@@ -414,10 +414,10 @@ function recipeTemplate(recipe) {
         <article class="recipe">
             <section class="header">
                 <i class="fa-solid fa-x"></i>
-                <h3 class="recipeName"><a href=${recipe.link} target="_blank">${recipe.name}</a></h3>
+                <h3 class="recipeName"><a href="${recipe.sourceLink}" target="_blank">${recipe.name}</a></h3>
             </section>
             <section class="main">
-                <img src=${recipe.link} alt=${recipe.name}>
+                <img src="${recipe.imgSrc}" alt="${recipe.name}">
                 <section class="timesContainer">
                     <h1>Time</h1>
                 </section>
