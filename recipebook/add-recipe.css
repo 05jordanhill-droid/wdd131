@@ -36,7 +36,7 @@ button, input{
 }
 
 #back-button{
-    max-width: 4%;
+    max-width: 10%;
 }
 iframe{
     aspect-ratio: 1/1;
@@ -52,8 +52,8 @@ iframe{
 }
 #recipe-pieces > div{
     display: grid;
-    grid-template-columns: 1fr 10fr;
-    min-height: 11.125%;
+    grid-template-columns: 1fr 8fr;
+    min-height: 50px;
 }
 #recipe-container{
     background-color: white;
