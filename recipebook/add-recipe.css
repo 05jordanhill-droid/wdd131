@@ -2,6 +2,14 @@
     margin: 0;
 }
 
+body{
+    color: #423E37;
+    background-color: #EDEBD7;
+}
+button, input{
+    background-color: #E3B23C;
+}
+
 .headline {
     font-family: "Amatic SC", sans-serif;
     font-weight: 700;
@@ -107,6 +115,10 @@ footer{
 }
 
 
+button:hover{
+    cursor: pointer;
+    background-color: #6E675F;
+}
 .fa-x{
     aspect-ratio: 1/1;
     margin-left: 15px;

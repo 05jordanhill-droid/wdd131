@@ -194,6 +194,10 @@ randomButton.addEventListener("click", randomOrder);
 let timeButton = document.querySelector("#time");
 timeButton.addEventListener("click", timeOrder);
 
+let addButton = document.querySelector("#recipe-add");
+addButton.addEventListener("click", function () {window.location.href = "add-recipe.html";});
+
+
 function isOnDisplay(recipe){
     let displayHtml = document.querySelector("#display-container").innerHTML;
     let recipeDisplay = displayTemplate(recipe);
